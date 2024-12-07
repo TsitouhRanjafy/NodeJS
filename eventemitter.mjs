@@ -13,9 +13,12 @@ eventEmitter.once('newListener',(event,listener) => {
         })
     }
 });
-eventEmitter.on('events', () => {
+eventEmitter.on('event', () => {
     console.log('A');
     
 })
 
-eventEmitter.emit('events');
+eventEmitter.emit('event');
+
+// B
+// A
