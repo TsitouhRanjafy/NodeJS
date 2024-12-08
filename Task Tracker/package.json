@@ -1,0 +1,14 @@
+{
+  "name": "task-tracker",
+  "version": "1.0.0",
+  "description": "CLI app to track tasks and manage to-do list",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.cjs"
+  },
+  "author": "Tsitohaina",
+  "license": "ISC",
+  "devDependencies": {
+    "prompts": "^2.4.2"
+  }
+}
