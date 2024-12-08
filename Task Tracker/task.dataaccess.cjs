@@ -25,6 +25,7 @@ const deleteById = (id) => {
     data.splice(--id,1,null)
 }
 
+
 module.exports = {
     newTask,
     getLastId,

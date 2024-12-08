@@ -36,26 +36,19 @@ async function listenCMD() {
                 service.deleteById(input.p2)
                 break;
             case 'mark-in-progress':
-                console.log('mark-in-progress id='+input.p2);
+                service.mark(input.p2,'in-progress');
                 break;
             case 'mark-done':
-                console.log(input.p1+" id="+input.p2);
+                service.mark(input.p2,'done');
                 break;
             case 'list':
-                service.getAllTask();
+                input.p2? service.listByStatus(input.p2) : service.getAllTask();
                 break;
             case 'task':
                 service.getTaskById(input.p2)
                 break;
             case 'help':
-                console.log("\t add <description>           Add a new task");
-                console.log("\t update <id> <description>   update task");
-                console.log("\t delete <id>                 delete one task ");
-                console.log("\t mark-in-progress <id>       mark one task in progress");
-                console.log("\t mark-done <id>              mark one done");
-                console.log("\t list                        list all task ");
-                console.log("\t list <param>                list task by [done,todo,in-progress]");
-                console.log("\t task <id>                   get task by id");
+                service.help();
                 break;
             default:
                 console.log(' none')
@@ -63,7 +56,7 @@ async function listenCMD() {
         }
         
         setTimeout(() => {
-        },1000)
+        },500)
     } while(input.p1 != 'stop');
 }    
 
@@ -89,4 +82,4 @@ function extract(text){
 
 setTimeout(() => {
     listenCMD();
-},500)
+},100)
