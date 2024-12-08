@@ -9,6 +9,8 @@
   "author": "Tsitohaina",
   "license": "ISC",
   "devDependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.8.0",
     "prompts": "^2.4.2"
   }
 }

@@ -1,4 +1,4 @@
-const fs =   require('node:fs');
+const fs = require('node:fs');
 const path = require('path');
 const express = require('express');
 const { openAsBlob } = require('node:fs')
